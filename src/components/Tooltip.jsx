@@ -15,13 +15,16 @@ function Tooltip({ text, children }) {
   };
 
   return (
-    <div 
-      className="tooltip" 
-      onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave}
-    >
-      {children}
-      {isVisible && <div className="tooltiptext">{text}</div>}
+    <div >
+        <h1
+            className="tooltip" 
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+        >{children}
+        <p>{isVisible && <div className="tooltiptext">{text}</div>}</p>
+        </h1>
+      
+      
     </div>
   );
 }
